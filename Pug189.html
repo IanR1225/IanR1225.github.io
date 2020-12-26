@@ -98,7 +98,11 @@ if (checkwhat==true) {
 document.getElementById("velgauge").innerHTML = controlx + ", " + controly + ", " + xvel + ", & " + yvel;
 }
 if (xvel>1000 || yvel>1000 || xvel<-1000 || yvel<-1000) {
+new Audio('https://raw.githubusercontent.com/IanR1225/IanR1225.github.io/main/RealityWarp.wav').play();
+setTimeout(function() {
 document.getElementById("bodman").style.filter = "brightness(200%) saturate(200%) contrast(2000%)"; document.getElementById("what").innerHTML = "EVENT HORIZON<input type=\"checkbox\" id=whatbox></input>"; xvel = 0; yvel = 0; controlx = 10; controly = 5; document.getElementById("velgauge").style.color = "crimson"; document.getElementById("velgauge").style.filter = "drop-shadow(0px 0px 5px red) drop-shadow(0px 0px 15px red)";
+}, 6000
+);
 }
 spinnerdeg+=xvel+yvel;
 document.getElementById("control").style.filter = "blur(" + ((Math.abs(xvel))+(Math.abs(yvel))) + "px)";
