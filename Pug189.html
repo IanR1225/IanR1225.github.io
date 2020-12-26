@@ -90,7 +90,9 @@ if (controly < 5) {controly = 5; yvel=(yvel+0.5)*-1;}
 if (controly > 55) {controly = 55; yvel=(yvel-0.5)*-1;}
 document.getElementById("velgauge").innerHTML = "";
 }
-if (controlx < 10 || controlx > 80 || controly < 5 || controly > 55 && onetimewhat==0) {new Audio('https://raw.githubusercontent.com/IanR1225/IanR1225.github.io/main/WHAT%20HOW%20MEME.mp3').play(); onetimewhat=1;}
+if (controlx < 10 || controlx > 80 || controly < 5 || controly > 55) {
+if (onetimewhat==0) {onetimewhat=1; new Audio('https://raw.githubusercontent.com/IanR1225/IanR1225.github.io/main/WHAT%20HOW%20MEME.mp3').play();}
+}
 if (controlx==69 && controly==69 && xvel==0 && yvel==0) {document.getElementById("bodman").style.transform = "skewX(6.9deg)"; document.getElementById("what").innerHTML = "NICE<input type=\"checkbox\" id=whatbox></input>";}
 if (checkwhat==true) {
 document.getElementById("velgauge").innerHTML = controlx + ", " + controly + ", " + xvel + ", & " + yvel;
