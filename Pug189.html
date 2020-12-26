@@ -97,6 +97,9 @@ if (controlx==69 && controly==69 && xvel==0 && yvel==0) {document.getElementById
 if (checkwhat==true) {
 document.getElementById("velgauge").innerHTML = controlx + ", " + controly + ", " + xvel + ", & " + yvel;
 }
+if (xvel>1000 || yvel>1000 || xvel<-1000 || yvel<-1000) {
+document.getElementById("bodman").style.filter = "brightness(200%) saturate(200%) contrast(2000%)"; document.getElementById("what").innerHTML = "EVENT HORIZON<input type=\"checkbox\" id=whatbox></input>"; xvel = 0; yvel = 0; controlx = 10; controly = 5; document.getElementById("velgauge").style.color = "crimson"; document.getElementById("velgauge").style.filter = "drop-shadow(0px 0px 5px red) drop-shadow(0px 0px 15px red)";
+}
 spinnerdeg+=xvel+yvel;
 document.getElementById("control").style.filter = "blur(" + ((Math.abs(xvel))+(Math.abs(yvel))) + "px)";
 if (spinnerdeg>359) {spinnerdeg=0;}
