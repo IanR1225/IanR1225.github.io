@@ -1,2 +1,119 @@
+<body id=bodman>
+<div id=what>WHAT<input type="checkbox" id=whatbox></input></div>
+<div id=ohhey>
+</div>
+</div>
+<div id=control></div>
+<div id=velgauge></div>
+</body>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
 
-<h1>placeholder thingigtngtnitgnrgtinnijit</h1>
+    body {
+margin:0;
+padding:0;
+background:black;
+overflow:hidden;
+}
+
+    #what {
+height:20vh;
+width:100vw;
+position:absolute;
+left:0;
+bottom:0;
+text-align:center;
+color:white;
+font-size:10vh;
+}
+
+    #ohhey {
+height:60vh;
+width:80vw;
+background:white;
+position:absolute;
+left:calc(50% - 40vw);
+top:calc(50% - 45vh);
+transition:background 2s;
+}
+
+    #control {
+height:10vh;
+width:10vw;
+position:absolute;
+}
+
+    #velgauge {
+height:10vh;
+width:100%;
+background:transparent;
+position:absolute;
+left:0;
+top:70vh;
+line-height:10vh;
+color:cyan;
+filter:drop-shadow(0px 0px 5px cyan) drop-shadow(0px 0px 15px cyan);
+font-size:5vh;
+text-align:center;
+font-family:"Faster One";
+animation:shake 0.01s infinite alternate linear;
+}
+
+   @keyframes shake {
+        0% {left:-0.1vw;}
+        100% {left:0.1vw;}
+}
+
+</style>
+
+<script>
+var spinnerdeg = 0;
+var controlx = 10;
+var controly = 5;
+var xvel = 0;
+var yvel = 0;
+var checkwhat = document.getElementById("whatbox").checked;
+setInterval(function() {
+checkwhat = document.getElementById("whatbox").checked;
+controlx+=xvel;
+controly+=yvel;
+if (checkwhat==false) {
+if (controlx < 10) {controlx = 10; xvel=(xvel+0.5)*-1;}
+if (controlx > 80) {controlx = 80; xvel=(xvel-0.5)*-1;}
+if (controly < 5) {controly = 5; yvel=(yvel+0.5)*-1;}
+if (controly > 55) {controly = 55; yvel=(yvel-0.5)*-1;}
+document.getElementById("velgauge").innerHTML = "";
+}
+if (controlx==69 && controly==69 && xvel==0 && yvel==0) {document.getElementById("bodman").style.transform = "skewX(6.9deg)"; document.getElementById("what").innerHTML = "NICE<input type=\"checkbox\" id=whatbox></input>";}
+if (checkwhat==true) {
+document.getElementById("velgauge").innerHTML = controlx + ", " + controly + ", " + xvel + ", & " + yvel;
+}
+spinnerdeg+=xvel+yvel;
+document.getElementById("control").style.filter = "blur(" + ((Math.abs(xvel))+(Math.abs(yvel))) + "px)";
+if (spinnerdeg>359) {spinnerdeg=0;}
+if (xvel>10 || yvel>10 || xvel<-10 || yvel<-10) {document.getElementById("control").style.background = "linear-gradient(" + spinnerdeg + "deg, black, cyan)"; document.getElementById("ohhey").style.background = "black"; document.getElementById("control").style.transform = "rotate(" + (spinnerdeg/50) + "deg)"}
+else {
+document.getElementById("control").style.background = "linear-gradient(" + spinnerdeg + "deg, black, red)";
+document.getElementById("ohhey").style.background = "white";
+}
+document.getElementById("control").style.left = controlx + "vw";
+document.getElementById("control").style.top = controly + "vh";
+
+document.onkeypress = function(event){
+  if (event.key.toLowerCase()=="w") {
+yvel-=1;
+}
+else   if (event.key.toLowerCase()=="a") {
+xvel-=1;
+}
+else   if (event.key.toLowerCase()=="s") {
+yvel+=1;
+}
+else   if (event.key.toLowerCase()=="d") {
+xvel+=1;
+}
+    };
+
+}, 40);
+
+</script>
