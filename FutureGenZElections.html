@@ -5,9 +5,9 @@
 </head>
 <div id=backcontain>
     <div id=page><img id=fixfix src="https://raw.githubusercontent.com/IanR1225/IanR1225.github.io/main/elec.jpg"></div>
-    <div id=sidelef><br><br></div>
-    <div id=siderig><br><br><img src="https://raw.githubusercontent.com/IanR1225/IanR1225.github.io/main/redslogan.png"></div>
-    <div id=sidebot><br><br></div>
+    <div class=side id=sidelef><br><br></div>
+    <div class=side id=siderig><br><br><img id="slog" src="https://raw.githubusercontent.com/IanR1225/IanR1225.github.io/main/redslogan.png"></div>
+    <div class=side id=sidebot><br><br></div>
     <div id=header>Current Election Shit</div>
     <div id=links></div>
 </div>
@@ -120,7 +120,7 @@ color:white;
     #links {
 height:5vh;
 width:80vw;
-background:linear-gradient(90deg, #AAAAAA, #CCCCCC, #AAAAAA);;
+background:linear-gradient(90deg, #AAAAAA, #CCCCCC, #AAAAAA);
 position:absolute;
 top:10.5vh;
 left:10vw;
@@ -150,4 +150,14 @@ margin:0;
 padding:0;
 border:0;
 }
+  #slog {
+height:0%;
+object-fit: contain;
+margin:0;
+padding:0;
+border:0;
+  }
+ .side:hover + #slog {
+height:30%;
+  }
 </style>
