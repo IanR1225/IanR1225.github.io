@@ -1,0 +1,302 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="153 1540" property="og:description">
+  <title>Seximal Trainer</title>
+</head>
+    <body><button type="text" id="x1" disabled>RNG, Misses<br>TI:ME</button>
+<input type="text" placeholder="Input answer" id="y2">
+<button type="button" onclick="distform();" id="output">Start/Submit<br>(Click/Tap)</button>
+<style>
+    body {
+padding:0;
+margin:0;
+}
+    #x1 {
+width:50%;
+height:50%;
+background:black;
+border:white 2px solid;
+color:white;
+text-align:center;
+font-size:400%;
+}
+
+    #y2 {
+width:50%;
+height:50%;
+background:black;
+border:white 2px solid;
+color:white;
+text-align:center;
+font-size:200%;
+position:absolute;
+top:50%;
+left:0;
+}
+
+    #output {
+width:50%;
+height:100%;
+background:black;
+border:white 2px solid;
+color:white;
+text-align:center;
+font-size:400%;
+position:absolute;
+right:0;
+top:0;
+font-family:monospace;
+}
+    ::placeholder {
+color:white;
+}
+</style>
+<script>
+var ss = 0;
+var rand = 0;
+var incorr = 0;
+var time = 0;
+var timetwo = 0;
+var timer = 0;
+var scoreboard = 0;
+var started = 0;
+
+//STARTSUBMIT// 
+
+function distform() {
+
+if (started==0) {
+setInterval(function() {
+time++;
+if (time==60) {timetwo++; time=0;}
+if (time.toString().length == 1) {time = "0" + time;}
+timer = timetwo + ":" + time;
+scoreboard = rand + " | " + incorr + "<br>" + timer;
+document.getElementById("x1").innerHTML = scoreboard;
+},1000)}
+started=1;
+
+//IF START//
+
+if (ss==0) {
+ss++;
+rand = Math.floor(Math.random() * 20) + 1;
+
+switch (rand) {
+
+    case 1:
+document.getElementById("output").innerHTML = "1423<br>-523";//500
+break;
+
+    case 2:
+
+document.getElementById("output").innerHTML = "10234<br>-1452";//4342
+break;
+
+    case 3:
+
+document.getElementById("output").innerHTML = "50<br>x4";//320
+break;
+
+    case 4:
+
+document.getElementById("output").innerHTML = "100<br>/20";//3
+break;
+
+    case 5:
+
+document.getElementById("output").innerHTML = "1253<br>+525";//2222
+break;
+
+    case 6:
+
+document.getElementById("output").innerHTML = "4400<br>-113";//4243
+break;
+
+    case 7:
+
+document.getElementById("output").innerHTML = "21<br>x6";//210
+break;
+
+    case 8:
+
+document.getElementById("output").innerHTML = "520<br>/20";//24
+break;
+
+    case 9:
+
+document.getElementById("output").innerHTML = "14<br>+12";//30
+break;
+
+    case 10:
+
+document.getElementById("output").innerHTML = "54321<br>-3210"; //51111
+break;
+
+    case 11:
+
+document.getElementById("output").innerHTML = "125<br>x3<br>-3";//420
+break;
+
+    case 12:
+
+document.getElementById("output").innerHTML = "1423<br>x2<br>-25";//3221
+break;
+
+    case 13:
+
+document.getElementById("output").innerHTML = "10³";//1000
+break;
+
+    case 14:
+
+document.getElementById("output").innerHTML = "3²+3";//20
+break;
+
+    case 15:
+
+document.getElementById("output").innerHTML = "100<br>x0.2<br>-2";//10
+break;
+
+    case 16:
+
+document.getElementById("output").innerHTML = "120<br>x0.13";//20
+break;
+
+    case 17:
+
+document.getElementById("output").innerHTML = "30<br>/0.3";//100
+break;
+
+    case 18:
+
+document.getElementById("output").innerHTML = "4²<br>-4<br>*0.1";//2
+break;
+
+    case 19:
+
+document.getElementById("output").innerHTML = "5²<br>+4";//44
+break;
+
+    case 20:
+
+document.getElementById("output").innerHTML = "12<br>-3²";//-1
+break;
+}
+
+}
+
+//IF SUBMIT//
+
+else {
+ss=0;
+var y2 = parseInt(document.getElementById("y2").value);
+switch (rand) {
+
+    case 1:
+if (y2=="500") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 2:
+if (y2=="4342") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 3:
+if (y2=="320") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 4:
+if (y2=="3") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 5:
+if (y2=="2222") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 6:
+if (y2=="4243") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 7:
+if (y2=="210") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 8:
+if (y2=="25") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 9:
+if (y2=="30") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 10:
+if (y2=="51111") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 11:
+if (y2=="420") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 12:
+if (y2=="3221") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 13:
+if (y2=="1000") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 14:
+if (y2=="20") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 15:
+if (y2=="10") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 16:
+if (y2=="20") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 17:
+if (y2=="100") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 18:
+if (y2=="2") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 19:
+if (y2=="44") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+
+    case 20:
+if (y2=="-1") {document.getElementById("output").innerHTML = "Correct";}
+else {document.getElementById("output").innerHTML = "Incorrect"; incorr++;}
+break;
+}
+}
+if (time.toString().length == 1) {time = "0" + time;}
+timer = timetwo + ":" + time;
+scoreboard = rand + " | " + incorr + "<br>" + timer;
+document.getElementById("x1").innerHTML = scoreboard;
+}
+</script>
+</body></html>
