@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+  
+  
+  </head>
+  <body>
+  <h1 class="rainbow-text">Rainbows are cool</h1>
+<style>
+a { 
+cursor:none;
+
+
+}
+
+a:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: transparent;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: cyan;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+.rainbow-text {
+ackground-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+  text-align: center;
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 24px;
+  animation: rainbow 8s ease infinite;
+
+}
+@keyframes rainbow { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 25%}
+    100%{background-position:0% 50%}
+}
+
+
+
+</style>
+  </body>
+</html>
