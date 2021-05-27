@@ -1,0 +1,185 @@
+<head>
+<title>Music Time Lads</title>
+
+</head>
+
+<body>
+
+    <h1>Test boi</h1>
+    <div id=divide></div>
+    <div id=itdogodownnoitdontnoitdoOHITDOGODOWN>
+        <div id=dropdown>Overview</div> <div id=droptent>Song</div>
+        <div id=dropdown>Wonky</div> <div id=droptent><a href="/location"><b>Yep</b></a></div>
+        <div id=dropdown>Contact</div> <div id=droptent>coasterscycleworks@gmail.com</div>
+</div>
+        <div id=gallery>
+            <div id=thingingallery1></div>
+            <div id=thingingallery2></div>
+            <div id=thingingallery3></div>
+            <div id=thingingallery4></div>
+            <div id=thingingallery5></div>
+</div>
+<div id=note>I like these songs because<br><marquee><b>They Slap</b></marquee></div>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    body {
+background:black;
+padding:0;
+margin:0;
+border:0;
+}
+    #logo {
+background-image:url("https://raw.githubusercontent.com/IanR1225/Coasters-Cycle-Works/main/CCW_Temp.jpg");
+background-repeat:no-repeat;
+background-size:contain;
+position:absolute;
+left:0;
+top:0;
+width:40%;
+height:20%;
+}
+    #divide {
+width:90%;
+height:0.2vh;
+left:5%;
+top:20%;
+background:#323232;
+position:absolute;
+}
+    #itdogodownnoitdontnoitdoOHITDOGODOWN {
+justify-content:center;
+height:10%;
+width:50%;
+position:absolute;
+left:45%;
+top:10%;
+justify-content:center;
+display:flex;
+}
+    #dropdown {
+height:100%;
+width:min-width;
+text-align:center;
+line-height:100%;
+color:white;
+font-family:'Roboto', sans-serif;
+font-size:1.5em;
+cursor:default;
+margin:1vw;
+}
+    #droptent {
+height:100%;
+width:100%;
+text-align:center;
+line-height:100%;
+color:white;
+font-family:'Roboto', sans-serif;
+font-size:1.5em;
+cursor:default;
+transform:rotateX(450deg);
+transition:all 1s;
+position:relative;
+left:0%;
+top:100%;
+transform-origin:top;
+}
+    #dropdown:hover + #droptent {
+transform:rotateX(0deg);
+}
+    #droptent:hover {
+transform:rotateX(0deg);
+}
+    #gallery {
+width:80%;
+height:40%;
+left:10%;
+top:30%;
+background:#696969;
+position:absolute;
+justify-content:center;
+display:flex;
+overflow:hidden;
+}
+    #thingingallery1 {
+height:80%;
+width:40%;
+background-image:url('https://freesvg.org/img/Question-Mark-Vortex-2.png');
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+position:relative;
+top:5%;
+margin: 2.5vh;
+
+}
+  #thingingallery2 {
+height:80%;
+width:40%;
+background-image:url('https://assets.boomkat.com/spree/products/376988/large/HAFTW025_dist_preview.jpg');
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+position:relative;
+top:5%;
+margin: 2.5vh;
+border: 10px solid #000000;
+
+
+}
+ #thingingallery3 {
+height:80%;
+width:40%;
+background-image:url('https://i.stack.imgur.com/y9DpT.jpg');
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+position:relative;
+top:5%;
+margin: 2.5vh;
+
+}
+#thingingallery4 {
+height:80%;
+width:40%;
+background-image:url('https://i.stack.imgur.com/y9DpT.jpg');
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+position:relative;
+top:5%;
+margin: 2.5vh;
+
+}
+#thingingallery5 {
+height:80%;
+width:40%;
+background-image:url('https://i.stack.imgur.com/y9DpT.jpg');
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+position:relative;
+top:5%;
+margin: 2.5vh;
+
+}
+ #note {
+height:calc(min-height + 1vh);
+width:20%;
+position:absolute;
+color:white;
+background:radial-gradient(black 0% 90%, red);
+border:red solid 0.5vh;
+font-size:2vh;
+font-family:'Roboto', sans-serif;
+top:70%;
+left:calc(40vw - 0.5vh);
+text-align:center;
+}
+    @keyframes spinyeah {
+        0% {transform:skewX(0deg);}
+        80% {transform:skewX(0deg);}
+        100% {transform:skewX(720deg);}
+}
+</style>
+
+</body>
