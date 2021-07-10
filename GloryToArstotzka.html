@@ -1,0 +1,121 @@
+<div id=sidebar>
+    <div id=logo></div>
+    <div id=fancyline></div>
+    <div id=sidetitle><strong>Military<br>Projects</strong></div>
+    <ul>
+<button onclick="showpanel('home');"><li>Home</li></button><br>
+<button onclick="showpanel('grar');"><li>Graphene Armor</li></button><br>
+<button onclick="showpanel('orvoclaica');"><li>Orvech Vonor Class<br>Aircraft Carrier</li></button><br>
+<button onclick="showpanel('nuen');"><li>Nuclear Energy 2.0</li></button><br>
+<button onclick="showpanel('drmurofi');"><li>Dragon Multi Role Fighter</li></button><br>
+<button onclick="showpanel('dra');"><li>D-11 Railgun</li></button><br>
+<button onclick="showpanel('viar');"><li>Viper Armor</li></button><br>
+<button onclick="showpanel('heclfr');"><li>Hermes Class Frigate</li></button><br>
+<button onclick="showpanel('baclsu');"><li>Barracuda Class Submarine</li></button><br>
+<button onclick="showpanel('reclaica');"><li>Resurgent Class Aircraft Carrier</li></button><br>
+<button onclick="showpanel('bhbopl');"><li>B-7H Bombardment Plane</li></button><br>
+<button onclick="showpanel('nvdgxwo');"><li>Nvidia DGX Workstations</li></button><br>
+</ul>
+</div>
+<div id=containpanels>
+    
+<div class=panel id=home></div>
+<div class=panel id=grar></div>
+<div class=panel id=orvoclaica></div>
+<div class=panel id=nuen></div>
+<div class=panel id=drmurofi></div>
+<div class=panel id=dra></div>
+<div class=panel id=viar></div>
+<div class=panel id=heclfr></div>
+<div class=panel id=baclsu></div>
+<div class=panel id=reclaica></div>
+<div class=panel id=bhbopl></div>
+<div class=panel id=nvdgxwo></div>
+    
+</div>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    #sidebar {
+height:100%;
+width:18rem;
+background:black;
+position:absolute;
+left:0;
+top:0;
+}
+    #fancyline {
+height:0.1rem;
+width:16rem;
+background:white;
+left:1rem;
+top:15rem;
+position:absolute;
+}
+    #logo {
+background-image:url("https://github.com/IanR1225/IanR1225.github.io/blob/main/glory.png?raw=true");
+height:5rem;
+width:6rem;
+background-size:contain;
+background-repeat:no-repeat;
+position:absolute;
+left:6rem;
+top:5rem;
+}
+    #sidetitle {
+height:5rem;
+width:8rem;
+color:white;
+position:absolute;
+top:9rem;
+left:5rem;
+text-align:center;
+font-size:2rem;
+font-family: 'Roboto', sans-serif;
+}
+    #containpanels {
+height:100%;
+width:calc(100% - 18rem);
+background:white;
+position:absolute;
+top:0;
+left:18rem;
+}
+    .panel {
+height:100%;
+width:100%;
+}
+    button {
+border:0;
+background:transparent;
+padding:0.5rem;
+font-size:1rem;
+text-align:left;
+}
+    ul {
+position:absolute;
+top:17rem;
+list-style-type:none;
+}
+    li {
+color:white;
+font-family: 'Roboto', sans-serif;
+}
+    li:hover, a:visited, a:link, a:active {
+color:red;
+text-decoration:none;
+}
+</style>
+<script>
+function showpanel(id) {
+toggle("panel", "none");
+document.getElementById(id).style.display = "block";
+}
+function toggle(className, displayState){
+    var elements = document.getElementsByClassName(className);
+
+    for (var i = 0; i < elements.length; i++){
+        elements[i].style.display = displayState;
+    }
+}
+showpanel("home");
+</script>
