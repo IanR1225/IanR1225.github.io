@@ -1,0 +1,102 @@
+<div id=introheader><marquee scrollamount="15">Arstotzka grows as a global military superpower | The gods have grown tired of us and have gifted a select few with extraordinary powers | Underground criminal ring referred to as BOA formed by gifted individuals | Break-ins come to a record high as most security techniques prove ineffective against the heightened | Arstotzkan military seeking to utilize powers for further technological breakthroughs | United Nations leaders coming together to form the Defenders of the Globe, known as DOG | Bringers of Anarchy target the untouched, spreading mass paranoia | Canadian man dies after losing control of his powers, setting himself ablaze. | Arstotzkan Dragon Multi-Role Fighter shot down by acid rifle, individual responsible is still on the run from authorities | Quantum tunneling put to use by police, experimentation is still in progress but results are promising</marquee></div>
+<div id=Containgroup>
+<button id=BOA class=group onclick="showpanel('BOAPage');"></button>
+<button id=Untouched class=group onclick="showpanel('UntouchedPage');"></button>
+<button id=DOG class=group onclick="showpanel('DOGPage');"></button>
+</div>
+<div id=BOAPage class=panel><button onclick="toggle('panel', 'none');" id=exit>Return</button></div>
+<div id=UntouchedPage class=panel><button onclick="toggle('panel', 'none');" id=exit>Return</button></div>
+<div id=DOGPage class=panel><button onclick="toggle('panel', 'none');" id=exit>Return</button></div>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    body {
+background:black;
+padding:0;
+border:0;
+margin:0;
+}
+    #introheader {
+height:6rem;
+width:100%;
+left:0;
+top:0;
+position:absolute;
+background:#161616;
+color:white;
+line-height:6rem;
+font-family: 'Roboto', sans-serif;
+font-size:2rem;
+}
+    #Containgroup {
+height:calc(100% - 6rem);
+width:30rem;
+position:absolute;
+top:6rem;
+left:calc(50% - 15rem);
+display:flex;
+justify-content:center;
+flex-direction:column;
+}
+    .group {
+height:calc(100% / 3);
+width:100%;
+border:0;
+background-size:contain;
+background-position:center;
+}
+    #BOA {
+background-image:url("https://github.com/IanR1225/IanR1225.github.io/blob/main/BOA.gif?raw=true");
+}
+    #Untouched {
+background-image:url("https://github.com/IanR1225/IanR1225.github.io/blob/main/Untouched.gif?raw=true");
+}
+    #DOG {
+background-image:url("https://github.com/IanR1225/IanR1225.github.io/blob/main/DOG.gif?raw=true");
+}
+    .panel {
+height:100%;
+width:100%;
+color:white;
+position:absolute;
+top:0;
+left:0;
+text-align:center;
+font-family: 'Roboto', sans-serif;
+}
+    #BOAPage {
+background:linear-gradient(black, crimson, red, darkred, black);
+}
+    #UntouchedPage {
+background:linear-gradient(black, lime, green, darkgreen, black);
+}
+    #DOGPage {
+background:linear-gradient(black, turquoise, lightseagreen, darkcyan, black);
+}
+    #exit {
+height:6rem;
+width:100%;
+position:absolute;
+top:0;
+left:0;
+color:white;
+background:#161616;
+text-align:center;
+line-height:6rem;
+font-family: 'Roboto', sans-serif;
+font-size:2rem;
+}
+</style>
+<script>
+function showpanel(id) {
+toggle("panel", "none");
+document.getElementById(id).style.display = "block";
+}
+function toggle(className, displayState){
+    var elements = document.getElementsByClassName(className);
+
+    for (var i = 0; i < elements.length; i++){
+        elements[i].style.display = displayState;
+    }
+}
+toggle("panel", "none");
+</script>
