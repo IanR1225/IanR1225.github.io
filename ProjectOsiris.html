@@ -9,9 +9,9 @@
 <button id=Untouched class=group onclick="showpanel('UntouchedPage');"></button>
 <button id=DOG class=group onclick="showpanel('DOGPage');"></button>
 </div>
-<div id=BOAPage class=panel><button onclick="toggle('panel', 'none');" id=exit>Return</button></div>
-<div id=UntouchedPage class=panel><button onclick="toggle('panel', 'none');" id=exit>Return</button></div>
-<div id=DOGPage class=panel><button onclick="toggle('panel', 'none');" id=exit>Return</button></div>
+<div id=BOAPage class=panel><button onclick="toggle('panel', 'none');" id=exit>Return</button><div id=BOAlabel class=pglabel>The heightened individuals with malicious purpose.</div></div>
+<div id=UntouchedPage class=panel><button onclick="toggle('panel', 'none');" id=exit>Return</button><div id=Untouchedlabel class=pglabel>The unchanged. The defenseless.</div></div>
+<div id=DOGPage class=panel><button onclick="toggle('panel', 'none');" id=exit>Return</button><div id=DOGlabel class=pglabel>The prior authority, desperately trying to regain control.</div></div>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
     body {
@@ -89,6 +89,27 @@ text-align:center;
 line-height:6rem;
 font-family: 'Roboto', sans-serif;
 font-size:2rem;
+}
+    .pglabel {
+height:6rem;
+width:100%;
+position:absolute;
+top:6rem;
+left:0;
+background:#323232;
+text-align:center;
+line-height:6rem;
+font-family: 'Roboto', sans-serif;
+font-size:2rem;
+}
+    #BOAlabel {
+color:crimson;
+}
+    #Untouchedlabel {
+color:lime;
+}
+    #DOGlabel {
+color:turquoise;
 }
 </style>
 <script>
