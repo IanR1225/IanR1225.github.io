@@ -1,0 +1,292 @@
+<div id=sidebar>
+    <div id=logo></div>
+    <div id=fancyline></div>
+    <div id=sidetitle><strong>Message<br>Maker</strong></div>
+    <ul>
+<button onclick="showpanel('home');"><li>Home</li></button><br>
+<button onclick="showpanel('msg');"><li>msg()</li></button><br>
+<button onclick="showpanel('typing');"><li>typing()</li></button><br>
+<button onclick="showpanel('ping');"><li>ping()</li></button><br>
+<button onclick="showpanel('botnote');"><li>botnote()</li></button><br>
+<button onclick="showpanel('gid');"><li>gid()</li></button><br>
+<button onclick="showpanel('hts');"><li>How to start</li></button><br>
+<button onclick="showpanel('example');"><li>Example</li></button><br>
+</ul>
+</div>
+<div id=containpanels>
+    
+<div class=panel id=home>
+    Message Maker<br>
+    By Pug#8082<br>
+    - - - - -<br>
+    <br>
+    msg()<br>
+    Generates a customized client-side message in the channel<br>
+    <br>
+    typing()<br>
+    Shows the typing indicator with a custom message<br>
+    <br>
+    ping()<br>
+    Generates a ping<br>
+    Used with msg()<br>
+    <br>
+    botnote()<br>
+    Creates a verified bot tag on the most recent message with a custom message<br><br>
+    gid()<br>
+    Adds an image to the most recent message</div>
+<div class=panel id=msg>How to use<br>
+    msg()<br>
+    - - - - -<br>
+    <br>
+    Format<br>
+    <span class=thislineisgettingkindalongisntit>msg("name", "namecolor", "message", "time", "profilelink", true/false);</span><br>
+    <br>
+    True/False is for whether or not you were pinged in the message<br>
+    <br>
+    Setting time to "autoPM" or "autoAM" will use the current time in AM or PM<br>
+    <br>
+    namecolor accepts things like "blue", "darkgreen", "#420069", and "rgb(100, 33, 255)"<br>
+    <br>
+    Linebreaks are typed as &#92;n or &lt;br&gt;, bold text is like &lt;b&gt;this&lt;&#47;b&gt;, and italic is &lt;i&gt;this&lt;&#47;i&gt;<br>
+    <br>
+    Put \ before apostrophes or quotes in text so nothing breaks, for example the message would me "I\'m an \"example\"."</div>
+<div class=panel id=typing>How to use<br>
+    typing()<br>
+    - - - - -<br>
+    <br>
+    Format<br>
+    <span class=thislineisgettingkindalongisntit>typing("text");</span><br>
+    <br>
+    It's pretty simple, you put in text and the typing indicator pops up with that text.
+    </div>
+<div class=panel id=ping>How to use<br>
+    ping()<br>
+    - - - - -<br>
+    <br>
+    Format<br>
+    <span class=thislineisgettingkindalongisntit>ping("username");</span><br>
+    <br>
+    Usage<br>
+    <span class=thislineisgettingkindalongisntit><span class=notimportant>msg("name", "namecolor", </span>ping("Fossil Fuel Snatcher") + "Did you steal the coal from my furnace for the seventh time?"<span class=notimportant>, "time", "profilelink", true/false);</span></span><br>
+    <br>
+    If you want to be the one pinged, put in your name. To get the golden youhavebeenpinged glow on the message, set mentioned to <b>true</b> in msg().
+    </div>
+<div class=panel id=botnote>How to use<br>
+    botnote()<br>
+    - - - - -<br>
+    <br>
+    Format<br>
+    <span class=thislineisgettingkindalongisntit>botnote("text");</span><br>
+    <br>
+    botnote() adds the blue verified bot tag to the most recent message but with custom text. That's it.</div>
+<div class=panel id=gid>How to use<br>
+    gid()<br>
+    - - - - -<br>
+    <br>
+    Format<br>
+    <span class=thislineisgettingkindalongisntit>gid("width", "height", "link");</span><br>
+    <br>
+    gid() stands for Generate Image DIV, which essentially means it slaps together an image.<br>
+    <br>
+    You can see the width and height of images in the tab of some browsers or just in image editing software.<br>
+    <br>
+    Discord only accepts some links such as from itself, imgur, tenor, gyfcat, and a few others.<br>
+    <br>
+    If your image doesn't work because of this, send it somewhere and then copy that image link. It'll make it a Discord link so it works.</div>
+<div class=panel id=hts>How to start<br>
+    :D<br>
+    - - - - -<br>
+    <br>
+    Explaining<br>
+    So all you need to do is define the functions and then you can use them<br>
+    <br>
+    Copy everything from the text box, go to Discord, CTRL+SHIFT+i, Console, slap everything in there, and then Enter. Then it works until Discord restarts.<br>
+    <br>
+    <input type=text value="function msg(name, namecolor, message, time, profilelink, mentioned) {
+if (time == &quot;autoAM&quot;) {
+var d = new Date();
+var nm = d.getMinutes();
+var nh = d.getHours();
+if (nm&lt;10) {nm = &quot;0&quot; + nm;}
+if (nh&gt;12) {nh = nh - 12;}
+var timeformatted = nh + &quot;:&quot; + nm;
+time = &quot;Today at &quot; + timeformatted + &quot; AM&quot;;
+}
+if (time == &quot;autoPM&quot;) {
+var d = new Date();
+var nm = d.getMinutes();
+var nh = d.getHours();
+if (nm&lt;10) {nm = &quot;0&quot; + nm;}
+if (nh&gt;12) {nh = nh - 12;}
+var timeformatted = nh + &quot;:&quot; + nm;
+time = &quot;Today at &quot; + timeformatted + &quot; PM&quot;;
+}
+if (mentioned == true) {var mentionclass = &quot;mentioned-xhSam7&quot;;}
+else {var mentionclass = &quot;&quot;;}
+var frankenstein = &quot;&lt;div class=\&quot;message-2qnXI6 &quot; + mentionclass + &quot; cozyMessage-3V1Y8y groupStart-23k01U wrapper-2a6GCs cozy-3raOZG zalgo-jN1Ica\&quot; role=\&quot;listitem\&quot; data-list-item-id=\&quot;chat-messages___chat-messages-865345159550337035\&quot; tabindex=\&quot;-1\&quot; id=\&quot;chat-messages-865345159550337035\&quot;&gt;&lt;div class=\&quot;contents-2mQqc9\&quot; role=\&quot;document\&quot;&gt;&lt;img src=\&quot;&quot; + profilelink + &quot;\&quot; aria-hidden=\&quot;true\&quot; class=\&quot;avatar-1BDn8e clickable-1bVtEA\&quot; alt=\&quot; \&quot;&gt;&lt;h2 class=\&quot;header-23xsNx\&quot; aria-describedby=\&quot;reply-context-865345159550337035\&quot;&gt;&lt;span class=\&quot;headerText-3Uvj1Y\&quot;&gt;&lt;span class=\&quot;username-1A8OIy desaturateUserColors-1gar-1 clickable-1bVtEA\&quot; aria-controls=\&quot;popout_3979\&quot; aria-expanded=\&quot;false\&quot; role=\&quot;button\&quot; tabindex=\&quot;0\&quot; style=\&quot;color: &quot; + namecolor + &quot;;\&quot;&gt;&quot; + name + &quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=\&quot;timestamp-3ZCmNB timestampInline-yHQ6fX\&quot;&gt;&lt;time aria-label=\&quot;&quot; + time + &quot;\&quot; datetime=\&quot;2021-07-15T21:32:43.372Z\&quot;&gt;&lt;i class=\&quot;separator-2nZzUB\&quot; aria-hidden=\&quot;true\&quot;&gt; &mdash; &lt;/i&gt;&quot; + time + &quot;&lt;/time&gt;&lt;/span&gt;&lt;/h2&gt;&lt;div class=\&quot;markup-2BOw-j messageContent-2qWWxC\&quot;&gt;&quot; + message + &quot;&lt;/div&gt;&lt;/div&gt;&lt;div class=\&quot;container-1ov-mD\&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\&quot;buttonContainer-DHceWr\&quot;&gt;&lt;div class=\&quot;buttons-cl5qTG container-3npvBV isHeader-2dII4U\&quot; aria-label=\&quot;Message Actions\&quot;&gt;&lt;div class=\&quot;wrapper-2aW0bm\&quot;&gt;&lt;div class=\&quot;button-1ZiXG9\&quot; aria-label=\&quot;Add Reaction\&quot; aria-controls=\&quot;popout_4467\&quot; aria-expanded=\&quot;false\&quot; role=\&quot;button\&quot; tabindex=\&quot;0\&quot;&gt;&lt;svg class=\&quot;icon-3Gkjwa\&quot; aria-hidden=\&quot;false\&quot; width=\&quot;24\&quot; height=\&quot;24\&quot; viewBox=\&quot;0 0 24 24\&quot;&gt;&lt;path fill=\&quot;currentColor\&quot; fill-rule=\&quot;evenodd\&quot; clip-rule=\&quot;evenodd\&quot; d=\&quot;M12.2512 2.00309C12.1677 2.00104 12.084 2 12 2C6.477 2 2 6.477 2 12C2 17.522 6.477 22 12 22C17.523 22 22 17.522 22 12C22 11.916 21.999 11.8323 21.9969 11.7488C21.3586 11.9128 20.6895 12 20 12C15.5817 12 12 8.41828 12 4C12 3.31052 12.0872 2.6414 12.2512 2.00309ZM10 8C10 6.896 9.104 6 8 6C6.896 6 6 6.896 6 8C6 9.105 6.896 10 8 10C9.104 10 10 9.105 10 8ZM12 19C15.14 19 18 16.617 18 14V13H6V14C6 16.617 8.86 19 12 19Z\&quot;&gt;&lt;/path&gt;&lt;path d=\&quot;M21 3V0H19V3H16V5H19V8H21V5H24V3H21Z\&quot; fill=\&quot;currentColor\&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;&lt;div class=\&quot;button-1ZiXG9\&quot; aria-label=\&quot;Edit\&quot; role=\&quot;button\&quot; tabindex=\&quot;0\&quot;&gt;&lt;svg class=\&quot;icon-3Gkjwa\&quot; aria-hidden=\&quot;false\&quot; width=\&quot;16\&quot; height=\&quot;16\&quot; viewBox=\&quot;0 0 24 24\&quot;&gt;&lt;path fill-rule=\&quot;evenodd\&quot; clip-rule=\&quot;evenodd\&quot; d=\&quot;M19.2929 9.8299L19.9409 9.18278C21.353 7.77064 21.353 5.47197 19.9409 4.05892C18.5287 2.64678 16.2292 2.64678 14.817 4.05892L14.1699 4.70694L19.2929 9.8299ZM12.8962 5.97688L5.18469 13.6906L10.3085 18.813L18.0201 11.0992L12.8962 5.97688ZM4.11851 20.9704L8.75906 19.8112L4.18692 15.239L3.02678 19.8796C2.95028 20.1856 3.04028 20.5105 3.26349 20.7337C3.48669 20.9569 3.8116 21.046 4.11851 20.9704Z\&quot; fill=\&quot;currentColor\&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;&lt;div class=\&quot;button-1ZiXG9\&quot; aria-label=\&quot;More\&quot; aria-controls=\&quot;popout_4468\&quot; aria-expanded=\&quot;false\&quot; role=\&quot;button\&quot; tabindex=\&quot;0\&quot;&gt;&lt;svg class=\&quot;icon-3Gkjwa\&quot; aria-hidden=\&quot;false\&quot; width=\&quot;24\&quot; height=\&quot;24\&quot; viewBox=\&quot;0 0 24 24\&quot;&gt;&lt;path fill=\&quot;currentColor\&quot; fill-rule=\&quot;evenodd\&quot; clip-rule=\&quot;evenodd\&quot; d=\&quot;M7 12.001C7 10.8964 6.10457 10.001 5 10.001C3.89543 10.001 3 10.8964 3 12.001C3 13.1055 3.89543 14.001 5 14.001C6.10457 14.001 7 13.1055 7 12.001ZM14 12.001C14 10.8964 13.1046 10.001 12 10.001C10.8954 10.001 10 10.8964 10 12.001C10 13.1055 10.8954 14.001 12 14.001C13.1046 14.001 14 13.1055 14 12.001ZM19 10.001C20.1046 10.001 21 10.8964 21 12.001C21 13.1055 20.1046 14.001 19 14.001C17.8954 14.001 17 13.1055 17 12.001C17 10.8964 17.8954 10.001 19 10.001Z\&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&quot;;
+var puttogether = document.createElement(&quot;div&quot;);
+puttogether.innerHTML = frankenstein;
+var listy = document.getElementsByClassName(&quot;scrollerSpacer-avRLaA&quot;);
+var parent = document.getElementsByClassName(&quot;scrollerInner-2YIMLh&quot;);
+var thechat = listy[0];
+var parentscroll = parent[0];
+parentscroll.insertBefore(puttogether, thechat);
+}
+function typing(typingmessage) {
+var typenstein = &quot;&lt;div class=\&quot;typing-2GQL18 base-gE7OpD stop-animation\&quot;&gt;&lt;svg width=\&quot;24.5\&quot; height=\&quot;7\&quot; class=\&quot;ellipsis-19qdx6 dots-3Bkt3k themed-IQiCm3\&quot;&gt;&lt;g style=\&quot;opacity: 1;\&quot;&gt;&lt;circle cx=\&quot;3.5\&quot; cy=\&quot;3.5\&quot; r=\&quot;3.5\&quot; fill=\&quot;currentColor\&quot; style=\&quot;opacity: 0.5;\&quot;&gt;&lt;/circle&gt;&lt;circle cx=\&quot;12.25\&quot; cy=\&quot;3.5\&quot; r=\&quot;3.5\&quot; fill=\&quot;currentColor\&quot; style=\&quot;opacity: 0.75;\&quot;&gt;&lt;/circle&gt;&lt;circle cx=\&quot;21\&quot; cy=\&quot;3.5\&quot; r=\&quot;3.5\&quot; fill=\&quot;currentColor\&quot; style=\&quot;opacity: 1;\&quot;&gt;&lt;/circle&gt;&lt;/g&gt;&lt;/svg&gt;&lt;span class=\&quot;text-1y-e8-\&quot; aria-live=\&quot;polite\&quot; aria-atomic=\&quot;true\&quot;&gt;&quot; + typingmessage + &quot;&lt;/span&gt;&lt;/div&gt;&quot;;
+var typingthing = document.createElement(&quot;div&quot;);
+typingthing.innerHTML = typenstein;
+var chatform = document.getElementsByClassName(&quot;form-2fGMdU&quot;);
+var chattyping = chatform[0];
+chattyping.appendChild(typingthing);
+}
+function ping(user) {
+var pingspan = &quot;&lt;span class=\&quot;mention wrapper-3WhCwL mention interactive\&quot; aria-controls=\&quot;popout_1132\&quot; aria-expanded=\&quot;false\&quot; tabindex=\&quot;0\&quot; role=\&quot;button\&quot;&gt;@&quot; + user + &quot;&lt;/span&gt;&quot;;
+return pingspan;
+}
+function botnote(notetext) {
+var botenstein = &quot;&lt;span class=\&quot;botTagCozy-1fFsZk botTag-1un5a6 botTagRegular-2HEhHi botTag-2WPJ74 rem-2m9HGf\&quot;&gt;&lt;svg aria-label=\&quot;Verified Bot\&quot; class=\&quot;botTagVerified-1klIIt\&quot; aria-hidden=\&quot;false\&quot; width=\&quot;16\&quot; height=\&quot;16\&quot; viewBox=\&quot;0 0 16 15.2\&quot;&gt;&lt;path d=\&quot;M7.4,11.17,4,8.62,5,7.26l2,1.53L10.64,4l1.36,1Z\&quot; fill=\&quot;currentColor\&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;span class=\&quot;botText-1526X_\&quot;&gt;&quot; + notetext + &quot;&lt;/span&gt;&lt;/span&gt;&quot;;
+var botensteinrealboy = document.createElement(&quot;span&quot;);
+botensteinrealboy.innerHTML = botenstein;
+var username = document.getElementsByClassName(&quot;username-1A8OIy&quot;);
+var usernamefix = username[username.length - 1];
+usernamefix.appendChild(botensteinrealboy);
+}
+function gid(width, height, link) {
+var imagestein = &quot;&lt;div class=\&quot;messageAttachment-1aDidq\&quot;&gt;&lt;a class=\&quot;anchor-3Z-8Bb anchorUnderlineOnHover-2ESHQB imageWrapper-2p5ogY imageZoom-1n-ADA clickable-3Ya1ho embedWrapper-lXpS3L\&quot; tabindex=\&quot;0\&quot; href=&quot; + link + &quot; rel=\&quot;noreferrer noopener\&quot; target=\&quot;_blank\&quot; role=\&quot;button\&quot; style=\&quot;width: &quot; + width + &quot;px; height: &quot; + height + &quot;px;\&quot;&gt;&lt;img alt=\&quot;\&quot; src=&quot; + link + &quot; style=\&quot;width: &quot; + width + &quot;px; height: &quot; + height + &quot;px;\&quot;&gt;&lt;/a&gt;&lt;/div&gt;&quot;;
+var imagediv = document.createElement(&quot;div&quot;);
+imagediv.innerHTML = imagestein;
+var imagecontain = document.getElementsByClassName(&quot;container-1ov-mD&quot;);
+var parentimgcon = imagecontain[imagecontain.length - 1];
+parentimgcon.appendChild(imagediv);
+}"></div>
+<div class=panel id=example><img src="https://github.com/IanR1225/IanR1225.github.io/blob/main/example.PNG?raw=true"></div>
+    
+</div>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    #sidebar {
+height:100%;
+width:18rem;
+background:#23272A;
+position:absolute;
+left:0;
+top:0;
+display:flex;
+justify-content:center;
+}
+    #fancyline {
+height:0.1rem;
+width:16rem;
+background:white;
+left:1rem;
+top:15rem;
+position:absolute;
+}
+    #logo {
+background-image:url("https://github.com/IanR1225/IanR1225.github.io/blob/juno/you%20have%20been%20the%20don't.PNG?raw=true");
+height:6rem;
+width:4.5rem;
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
+position:absolute;
+top:2rem;
+overflow:hidden;
+}
+    #sidetitle {
+height:5rem;
+width:8rem;
+color:white;
+position:absolute;
+top:9rem;
+left:5rem;
+text-align:center;
+font-size:2rem;
+font-family: 'Roboto', sans-serif;
+}
+    #containpanels {
+height:100%;
+width:calc(100% - 18rem);
+background:white;
+position:absolute;
+top:0;
+left:18rem;
+}
+    .panel {
+height:calc(100% - 2rem);
+width:calc(100% - 2rem);
+background:linear-gradient(90deg, #23272A, #36393E 20%);
+text-align:center;
+font-size:2rem;
+font-family: 'Roboto', sans-serif;
+color:white;
+padding:1rem;
+}
+    .thislineisgettingkindalongisntit {
+font-size:1.5rem;
+font-family:monospace;
+}
+    .notimportant {
+color:gray;
+}
+    img {
+position:absolute;
+top:40%;
+left:20%;
+}
+    button {
+border:0;
+background:#2C2F33;
+border-radius:10%;
+margin:0.5rem;
+padding:0.5rem;
+font-size:2rem;
+text-align:center;
+}
+    ul {
+position:absolute;
+top:17rem;
+list-style-type:none;
+}
+    li {
+color:white;
+font-family: 'Roboto', sans-serif;
+}
+    li:hover, a:visited, a:link, a:active {
+color:cyan;
+text-decoration:none;
+}
+</style>
+<script>
+var startrand = Math.floor(Math.random() * 5) + 1;
+switch (startrand) {
+    case 5:
+        document.getElementById("logo").style.backgroundImage = "url('https://github.com/IanR1225/IanR1225.github.io/blob/juno/ahjnnjsbdyhgfeuyds.PNG?raw=true')";
+break;
+    case 4:
+        document.getElementById("logo").style.backgroundImage = "url('https://github.com/IanR1225/IanR1225.github.io/blob/juno/happ.PNG?raw=true')";
+break;
+    case 3:
+        document.getElementById("logo").style.backgroundImage = "url('https://github.com/IanR1225/IanR1225.github.io/blob/juno/hello%20I%20am%20here%20for%20my%20job%20interview%20I%20want%20to%20be%20a%20software%20engineer%20at%20the%20massechuggers%20institute%20of%20technonologongous.PNG?raw=true')";
+break;
+    case 2:
+        document.getElementById("logo").style.backgroundImage = "url('https://github.com/IanR1225/IanR1225.github.io/blob/juno/lick.png?raw=true')";
+break;
+    case 1:
+        document.getElementById("logo").style.backgroundImage = "url('https://github.com/IanR1225/IanR1225.github.io/blob/juno/you%20have%20been%20the%20don't.PNG?raw=true')";
+break;
+}
+function showpanel(id) {
+toggle("panel", "none");
+document.getElementById(id).style.display = "block";
+}
+function toggle(className, displayState){
+    var elements = document.getElementsByClassName(className);
+
+    for (var i = 0; i < elements.length; i++){
+        elements[i].style.display = displayState;
+    }
+}
+showpanel("home");
+</script>
