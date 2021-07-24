@@ -8,10 +8,19 @@
 <button id=BOA class=group onclick="showpanel('BOAPage');"></button>
 <button id=Untouched class=group onclick="showpanel('UntouchedPage');"></button>
 <button id=DOG class=group onclick="showpanel('DOGPage');"></button>
+<button id=Traits class=group onclick="showpanel('TraitPage');"></button>
 </div>
 <div id=BOAPage class=panel><button onclick="toggle('panel', 'none');" id=exit>Return</button><div id=BOAlabel class=pglabel>The heightened individuals with malicious purpose.</div></div>
 <div id=UntouchedPage class=panel><button onclick="toggle('panel', 'none');" id=exit>Return</button><div id=Untouchedlabel class=pglabel>The unchanged. The defenseless.</div></div>
 <div id=DOGPage class=panel><button onclick="toggle('panel', 'none');" id=exit>Return</button><div id=DOGlabel class=pglabel>The prior authority, desperately trying to regain control.</div></div>
+<div id=TraitPage class=panel><button onclick="toggle('panel', 'none');" id=exit>Return</button><div id=Traitlabel class=pglabel>The known gifts and their owners.</div><br><br><br><br><br><br><br><br><br><br><br><br><span class=DOGtext>MURTAGH : Has a sword that absorbs light and heat, using the energy to accelerate itself faster. This only applies when the grip is held.</span><br><br>
+<span class=BOAtext>ZENYR : Has the ability to possess people, giving basic knowledge on how to move, talk, ect, but no information on their personality, memories, ect. Preferences however, are kept. The person will have no memory of anything they did or felt while possessed.</span><br><br>
+<span class=BOAtext>LISA : Mirrors arm movements and things held. A sword in your right hand appears in your left. Raising your right arm instead appears to raise your left. Vice versa. This false image can phase through objects, the real thing cannot. Picking up objects looks really weird.</span><br><br>
+<span class=BOAtext>DISHOTO : Has an obsidian ring with incomprehensable, ever-changing gold designs. If thrown, it will try to find adequate space to fit the thrower, and if successful it will swap that area with the thrower. It is essentially a teleportation ring. If space is not found for the thrower or the ring goes too long without stopping, it will return to the thrower's hand.</span><br><br>
+<span class=DOGtext>Q : Can quantum tunnel with guaranteed success and maintained bodily integrity, making them capable of passing through solid objects. This may prove useful in dodging attacks and performing unauthorized entries.</span><br><br>
+<span class=BOAtext>RIBS : Has a blue-flamed flamethrower and sulfuric acid shooter referred to as Vitrocitire, a triple-portmanteau of Vitriol, Velocity, and Fire. The weapon has a pressurized tank on the left and a tank two times bigger on the right. It has two triggers, which will be explained in a second. The left tank compresses atmospheric oxygen into red oxygen, or octaoxygen. The right tank naturally fills up with hydrogen sulfide, extracting it from the space around itself. These sources may include natural gas or anaerobic digestion. The main trigger expels hydrogen sulfide and sets it ablaze via autoignition, causing the blue fire to cast from the nozzle. The autoignition utilizes the barrel's tungsten coils and heats them to 232C. The trigger below it uses the same tungsten coils in the barrel of the gun to fuse the hydrogen sulfide and octaoxygen, spraying sulfuric acid (Vitriol) instead. The weapon is meant to be held with the dominant hand's index finger on the main trigger and middle finger on the secondary. The non-dominant hand holds the handle protruding from the bottom of the object just before the nozzle, most likely for stability when aiming. The chemical formula for sulfuric acid is H₂SO₄, which is convenient. Hydrogen Sulfide has two hydrogen atoms and one sulfur atom, completing the H₂S part of the formula. The octaoxygen tank is half the size, but contains molecules of O₈ each. This leads to each molecule of H₂S getting O₄ each, which completes the chemical formula for vitriol. The tungsten coils release enough thermal energy to remain under autoignition temperatures, but break the covalent bonds of the hydrogen sulfide and octaoxygen via thermal decomposition, and causes new bonds to form between the hydrogen, sulfur, and oxygen. This creates the intended product, sulfuric acid, but also results in things like sulfur monoxide and water. The formation of sulfuric acid this way is exothermic, so for every mole of sulfuric acid, 460 kilojoules are released. A mole of sulfuric acid is around 98.079 grams.</span><br><br>
+<span class=DOGtext>XENEGYNN : Absorbs all electromagnetism around themself, using it to double the forces in the same radius. An object moving at 4 MPH will be moving at 8 MPH, gravity will be two times as strong, and if there is wind I'd advise you to cover your ears.</span><br><br>
+</div>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
     body {
@@ -43,11 +52,12 @@ justify-content:center;
 flex-direction:column;
 }
     .group {
-height:calc(100% / 3);
-width:100%;
+height:calc(100% / 4);
+background:black;
 border:0;
 background-size:contain;
 background-position:center;
+background-repeat:no-repeat;
 }
     #BOA {
 background-image:url("https://github.com/IanR1225/IanR1225.github.io/blob/main/BOA.gif?raw=true");
@@ -57,6 +67,9 @@ background-image:url("https://github.com/IanR1225/IanR1225.github.io/blob/main/U
 }
     #DOG {
 background-image:url("https://github.com/IanR1225/IanR1225.github.io/blob/main/DOG.gif?raw=true");
+}
+    #Traits {
+background-image:url("https://github.com/IanR1225/IanR1225.github.io/blob/main/Trait%20Button.gif?raw=true");
 }
     .panel {
 height:100%;
@@ -76,6 +89,10 @@ background:linear-gradient(black, lime, green, darkgreen, black);
 }
     #DOGPage {
 background:linear-gradient(black, turquoise, lightseagreen, darkcyan, black);
+}
+    #TraitPage {
+background:black;
+color:white;
 }
     #exit {
 height:6rem;
@@ -100,7 +117,7 @@ background:#323232;
 text-align:center;
 line-height:6rem;
 font-family: 'Roboto', sans-serif;
-font-size:2rem;
+font-size:4vw;
 }
     #BOAlabel {
 color:crimson;
@@ -110,6 +127,15 @@ color:lime;
 }
     #DOGlabel {
 color:turquoise;
+}
+    .BOAtext {
+color:red;
+}
+    .DOGtext {
+color:cyan;
+}
+    #Traitlabel {
+color:white;
 }
 </style>
 <script>
