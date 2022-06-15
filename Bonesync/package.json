@@ -1,0 +1,14 @@
+{
+  "name": "bonesync",
+  "version": "1.0.0",
+  "description": "Riff",
+  "main": "index.js",
+  "repository": "none",
+  "author": "Pug#8082",
+  "license": "DOG",
+  "private": true,
+  "dependencies": {
+    "express": "4",
+    "socket.io": "^4.4.1"
+  }
+}
