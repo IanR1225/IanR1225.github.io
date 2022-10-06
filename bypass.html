@@ -1,0 +1,14 @@
+<input type="text" id="hamburgetURL">
+<button onclick="genDiv();">Make iframe</button>
+<script>
+var ifv; //ifv = iframe variable
+function genDiv() {
+ifv = document.createElement("iframe");
+ifv.src = document.getElementById("hamburgetURL").value;
+ifv.width = "100%";
+ifv.height = "100%";
+ifv.align = "center";
+ifv.setAttribute('allowFullScreen', '');
+document.body.appendChild(ifv);
+}
+</script>
