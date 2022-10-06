@@ -4,8 +4,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <title>Framepasser</title>
-<input type="text" id="hamburgetURL">
-<button onclick="genDiv();">Make iframe</button>
+<input class="stylizer" type="text" id="hamburgetURL" placeholder="Insert URL here">
+<button class="stylizer" onclick="genDiv();">Make iframe</button>
 <script>
 var ifv; //ifv = iframe variable
 function genDiv() {
@@ -18,3 +18,8 @@ ifv.setAttribute('allowFullScreen', '');
 document.body.appendChild(ifv);
 }
 </script>
+<style>
+body {padding:0; margin:0;}
+.stylizer {border:none; background:black; color:white; text-align:center; width:100%; height:3vh;}
+input::placeholder {color:gray;}
+</style>
