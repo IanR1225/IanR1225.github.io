@@ -4,6 +4,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <title>Framepasser</title>
+<div class="stylizer" id="note">
+Some pages intentionally prevent themselves from being put in an iframe. This can be circumvented using the <a href="https://chrome.google.com/webstore/detail/redirect-url-modify-heade/mdnleldcmiljblolnjhpnblkcekpdkpa">Requestly</a> extension<br>
+Set a <red>Modify Headers</red> rule to remove <red>X-Frame-Options</red> and <red>Content-Security-Policy</red> from <red>Response Headers</red>
+</div>
 <input class="stylizer" type="text" id="hamburgetURL" placeholder="Insert URL here">
 <button class="stylizer" onclick="genDiv();">Make iframe</button>
 <script>
@@ -11,10 +15,6 @@ var ifv; //ifv = iframe variable
 function genDiv() {
 ifv = document.createElement("iframe");
 ifv.src = document.getElementById("hamburgetURL").value;
-ifv.width = "100%";
-ifv.height = "100%";
-ifv.align = "center";
-ifv.border = 0;
 ifv.setAttribute('allowFullScreen', '');
 document.body.appendChild(ifv);
 }
@@ -23,4 +23,7 @@ document.body.appendChild(ifv);
 body {padding:0; margin:0; background:black;}
 .stylizer {border:none; background:black; color:white; text-align:center; width:100%; height:3vh;}
 input::placeholder {color:gray;}
+#note {font-family:monospace;}
+iframe {width:100%; height:100%; align-content:center; border:none;}
+red {color:red;}
 </style>
